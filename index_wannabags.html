@@ -1,0 +1,1099 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style type="text/css">
+			@font-face {
+				font-family: 'SuisseIntl';
+				src: url(https://github.com/oleg-lekhnitsky/wanna/blob/master/static/fonts/SuisseIntl-Regular.otf);
+				font-weight: 400;
+				-webkit-font-smoothing: antialiased;
+			}
+		</style>
+
+
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+				flex-wrap: wrap;
+			}
+			body, html{
+				font: 'SuisseIntl-Regular';
+				margin: 0;
+				padding: 0;
+				background-color: black;
+				font-size: 18px;
+				--widthA: 100vw;
+				--grey: #F1F1F1;
+				--black: #000000;
+				--blue: #41A1D4;
+				--ocher: #EBC814;
+				--accent: #DEFF1D;
+			}
+
+			.wrapper{
+				color: var(--grey);
+				background-color: black;
+				display: flex;
+				width: 100%;
+				flex-wrap: wrap;
+				box-sizing: border-box;
+				opacity: 1;
+				transition: all ease-out 400ms;
+				-webkit-animation: wrapper 800ms ease-in-out;
+				animation: loading 800ms ease-in-out;	
+			}
+
+
+			.header{
+				display: flex;
+				justify-content: space-between;
+
+				color: black;
+				font-size: calc(var(--widthA) / 60);
+				box-sizing: border-box;
+				padding-left: calc(var(--widthA) / 40);
+				padding-right: calc(var(--widthA) / 40);
+				padding-top: .25em;
+				position: fixed;
+				width: 100%;
+				transition: all ease-out 300ms;
+				z-index: 999;
+
+
+			}
+
+			.footer{
+				display: flex;
+				justify-content: space-between;
+				color: var(--grey);
+				font-size: calc(var(--widthA) / 60);
+				box-sizing: border-box;
+				padding-left: calc(var(--widthA) / 40);
+				padding-right: calc(var(--widthA) / 40);
+				padding-top: 2em;
+				padding-bottom: 4em;
+				width: 100%;
+				transition: all ease-out 300ms;
+				height: calc(var(--widthA) / 20);
+				align-content: center;
+			    align-items: center;
+			    justify-items: center;
+			}		
+
+			.divider{
+				width: 100%;
+				display: flex;
+				height: 1px;
+				background-color: var(--grey);
+				margin: 0 4rem;
+			}
+
+			.cta-button{
+				display: flex;
+				box-sizing: border-box;
+				align-content: center;
+				justify-content: center;
+				width: 100%;
+				background-color: var(--blue);
+				color: var(--black);
+				padding-top: calc(var(--widthA) / 45);
+				padding-bottom: calc(var(--widthA) / 65);
+				margin: calc(var(--widthA) / 40);
+				margin-top: calc(var(--widthA) / 20);
+				border-radius: calc(var(--widthA) / 60);
+				line-height: 0;
+				text-decoration: none;
+				transition: all ease-out 300ms;
+
+
+			}
+
+			.cta-button:hover{
+				background-color: var(--ocher);
+				color: var(--black);
+			}
+
+
+			.hero-section{
+				display: flex;
+				width: 100%;
+				height: 85vh;
+				overflow: hidden;
+				margin-top: 2rem;
+				border: solid 1px var(--grey);
+				border-radius: 40px;
+
+
+			}
+
+			.hero-title{
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 50%;
+				height: 80vh;
+				padding: 3rem;
+			}
+
+			.hero-title h1{
+				font-size: calc(var(--widthA) / 60);
+			}
+
+			.hero-title h2{
+				font-size: calc(var(--widthA) / 40);
+			}
+
+			.hero-heading{
+				text-align: center;
+				hyphens: none;
+			}
+
+			.hero-title-tags{
+				display: flex;
+				gap: .5rem;
+				margin-top: 1rem;
+			}
+
+			.tag{
+				display: inline-flex;
+				height: fit-content;
+				border: solid 1px var(--grey);
+				padding: .5rem;
+				border-radius: 15px;
+			}
+
+			.hero-title-tags p{
+				display: inline-flex;
+				align-content: center;
+				width: fit-content;
+			}
+
+			.hero-content{
+				width: 50%;
+				height: 100%;
+				overflow: hidden;
+				border-radius: 40px;
+			}
+
+			.heading{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				margin-top: 3rem;
+				margin-bottom: 2rem;
+				color: var(--accent);
+			}
+
+			.features{
+				display: flex;
+				justify-content: space-between;
+				width: 100%;	
+				padding: 2rem 4rem;
+							
+			}
+
+			.features-highlight{
+				display: flex;
+				justify-content: space-between;
+				color: black;
+				padding: 2rem 4rem;
+				background-image: url("https://static.tildacdn.com/tild6535-3230-4364-b061-346664343237/kevin-laminto-PNvTKa.jpeg");
+				background-size: fill;
+				background-position: center -700px;
+				width: 100%;
+				height: 140vh;
+							
+			}			
+
+			.features-highlight .tag{
+				border: solid 1px var(--black);
+			}
+
+			.feature{
+				width: 20%;
+			}
+
+			.features-heading, .features-text{
+				display: flex;
+				flex-direction: row;
+				width: 50%;
+			}
+
+			.features-heading{
+				display: flex;
+				width: 50%;
+				gap: 1rem;
+			}
+			.features-text{
+				display: flex;
+				width: 50%;
+				gap: .5rem;
+			}			
+
+
+			.features-heading h3{
+				width: 70%;
+
+			}
+
+			.features-statistics{
+				display: flex;
+				align-content: baseline;
+				width: 50%;
+				gap: 1rem;
+
+			}
+
+			.statistic-line{
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				height: fit-content;
+				padding-bottom: 1rem;
+				border-bottom: solid 1px var(--black);
+			}
+
+			.statistic-line p{
+				display: inline-flex;
+				width: fit-content;
+			}
+
+			.statistic-number p{
+				font-size: calc(var(--widthA) / 30);
+			}
+
+			.partners{
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				gap: 1rem;
+			}
+
+			.partner-logo{
+				width: 8rem;
+				height: 8rem;
+				border-radius: 15px;
+				background-color: var(--accent);
+			}
+
+			h2.heading{
+				display: inline-flex;
+				width: 50%;
+				text-align: center;
+			}
+
+			a{	
+				color: var(--black);
+				transition: all ease-out 400ms;
+			}
+
+			a:hover{
+				color: var(--blue);
+				transition: all ease-in 20ms;
+
+			}
+
+			.header-logo, .header-menu, .footer-logo{
+				display: flex;
+				color: black;
+				text-decoration: none;
+				gap: 1em;
+								
+			}
+
+			.header-logo{
+				gap: 0;
+
+				border-radius: 1em;
+				padding-right: .15em
+
+			}
+
+			a.header-logo{
+				width: fit-content;
+				
+			}			
+
+			a.header-menu, .header-logo{
+				border-radius: .3em;
+				
+				background-color: var(--grey .9);
+
+			}
+
+			a.header-menu{
+				padding-left: .2em;
+				padding-right: .2em;
+			}
+			.animated-logo{
+				height: calc(var(--widthA) / 60);
+				width: auto;
+				padding-right: .2em;
+				padding-left: .3em;
+				
+
+			}
+
+			.footer-logo, .footer-menu{
+				display: flex;
+				color: var(--grey);
+				text-decoration: none;
+				gap: 1em;
+				    align-content: center;
+			    justify-content: center;
+			    align-items: center;
+			    justify-items: center;
+			    width: 50%;
+			}
+
+			.footer-menu{
+				justify-content: flex-end;
+
+			}
+
+			.footer-menu-ad{
+				display: inline-flex;
+			    align-content: center;
+			    justify-content: center;
+			    align-items: center;
+			    justify-items: center;
+				line-height: 87%;
+				font-size: calc(var(--widthA) / 80);
+				color: var(--grey);
+				text-decoration: none;
+				border: solid 1px;	
+				border-radius: calc(var(--widthA) / 120);
+				padding: .5em .5em .5em .5em;
+				width: calc(var(--widthA) / 5);;
+
+			}
+
+
+
+			.divider-small{
+				display: block;
+				height: 10em;
+				width: 100%;
+			}
+
+
+			#loader {
+			  display: flex;
+			  align-content: center;
+			  justify-content: center;
+			  align-items: center;
+			  justify-items: center;
+			  margin: 0;
+			  width: 100%;
+			  height: 100vh;
+			  z-index: 10;
+			  color: var(--grey);
+			  border-radius: 0%;
+			  -webkit-animation: loading 3s ease-out;
+			  animation: loading 3s ease-out;		  
+
+			}
+
+			@-webkit-keyframes loading {
+			  0% { opacity: 0;}
+			  100% { opacity: 1;}
+			}
+
+			@keyframes loading {
+			  0% { opacity: 0; }
+			  100% { opacity: 1; }
+			}
+
+
+			#myDiv {
+			 	color: var(--grey);
+				background-color: black;
+				display: flex;
+				width: 100%;
+				flex-wrap: wrap;
+				box-sizing: border-box; 
+				opacity: 1;
+				
+			}
+
+
+
+
+
+
+			h1, h2, h3, h4, p, a{
+				margin: 0;
+				padding: 0;
+				font-family: 'Replica', sans-serif;
+				font-weight: 400;
+				-webkit-font-smoothing: antialiased;
+				hyphens: auto;
+			}
+			h1{
+				font-size: 5em;
+				line-height: 100%;
+				margin-bottom: 1em;
+	    		opacity: 1;
+	    		transition: all ease-out 100ms;
+				font-size: calc(var(--widthA) / 18);
+
+			}
+
+			h2{
+				font-size: 2em;
+				line-height: 100%;
+				margin-bottom: .3em;
+	    		opacity: 1;
+	    		transition: all ease-out 100ms;
+				font-size: calc(var(--widthA) / 25);
+			}	
+
+			h3{
+				font-size: calc(var(--widthA) / 40);
+				line-height: 100%;
+				hyphens: none;
+			}
+
+			h4{
+				font-size: 1.2em;
+	    		opacity: 1;
+	    		line-height: 115%;
+	    		transition: all ease-out 100ms;	
+				font-size: calc(var(--widthA) / 60);		
+			}
+
+			p{	
+				font-size: 1.2em;
+				line-height: 115%;
+				width: 100%;
+	    		opacity: 1;
+	    		transition: all ease-out 100ms;
+				font-size: calc(var(--widthA) / 60);
+			}
+
+			h1.awake
+			  {
+		    	transform: translate(0px);
+		    	opacity: 1;
+		    	transition: transform ease-out 600ms;
+	  		}		
+
+			h2.awake
+			  {
+		    	transform: translate(0px);
+		    	opacity: 1;
+		    	transition: transform ease-out 600ms;
+	  		}
+
+			h4.awake
+			  {
+		    	transform: translate(0px);
+		    	opacity: 1;
+		    	transition: transform ease-out 600ms;
+	  		}
+
+
+			p.awake
+			  {
+		    	transform: translate(0px);
+		    	opacity: 1;
+		    	transition: transform ease-out 600ms;
+	  		}  		
+
+
+
+
+			}
+
+			@-webkit-keyframes wrapper {
+			  0% { opacity: 0;}
+			  100% { opacity: 1;}
+			}
+
+			@keyframes wrapper {
+			  0% { opacity: 0;}
+			  100% { opacity: 1;}
+			}
+
+
+
+			.left-wrapper{
+				--widthA: 100vw;
+				color: var(--grey);
+				display: inherit;
+				flex-direction: column;
+				background-color: black;
+				width: 50%;
+				justify-content: space-between;
+				padding: 4em 1.5em 3.5em 2em;
+				padding-left: calc(var(--widthA) / 40);
+				padding-right: calc(var(--widthA) / 100);
+				box-sizing: border-box; 
+				max-width: 45em;
+				max-width: calc(var(--widthA) / 2);
+
+			}
+
+			.right-wrapper{
+				--widthA: 100vw;
+				color: var(--grey);
+				display: inherit;
+				flex-direction: column;
+				background-color: black;
+				width: 50%;
+				padding: 4em 2em 3.5em 1em;
+				padding-left: calc(var(--widthA) / 100);
+				padding-right: calc(var(--widthA) / 41);
+
+				box-sizing: border-box; 
+				max-width: 45em;
+				max-width: calc(var(--widthA) / 2);
+			}		
+
+			.text-block{
+				margin-bottom: 1em;
+				box-sizing: border-box; 
+
+			}
+
+			.cases-full{
+				width: 100%;
+				background-color: black;
+			}
+
+			.cases-center{
+				width: 76%;
+				background-color: black;
+			}		
+
+			img{
+	 			width: 100%;
+	 		}
+	 			
+	 		.image-full{
+	 			display: block;
+	 			width: 100%;
+	 			height: auto;
+	 			margin: 0;
+	 			line-height: 0;
+	 			box-sizing: border-box; 
+	 		}
+
+			.headings{
+				padding: 2em;
+				background-color: black;
+				color: var(--grey);
+				width:80%;
+				padding: 1.5em 1em 1em 1em;
+				padding-left: calc(var(--widthA) / 40);	
+				
+
+			}
+			h2.headings{
+				hyphens: none;
+			}
+
+
+
+
+
+			@media (max-width: 768px) {
+
+
+			.header{
+				display: flex;
+				justify-content: space-between;
+				color: var(--grey);
+				font-size: 1em;
+				box-sizing: border-box;
+				padding-left: 1em;
+				padding-right: 1em;
+				padding-top: .25em;
+				padding-bottom: .25em;
+				position: fixed;
+				width: 100%;
+				transition: all ease-out 300ms;
+
+				background-color: var(--grey);
+
+				z-index: 999;
+
+
+
+			}			
+
+
+			a.header-menu, .header-logo{
+				border-radius: .0em;
+				
+				background-color: var(--grey 1);
+
+			}
+
+			a.header-logo{
+				width: auto;
+				
+			}	
+
+
+			.footer-menu{
+				display: inline-flex;
+				flex-wrap: wrap;
+
+				font-size: 1em;
+				line-height: 87%;
+
+				align-content: flex-start;
+				align-items: flex-start;
+				justify-items: flex-start;
+							justify-content: space-between;
+				width: 100%;
+				gap: 0.9em;
+			}		
+
+			.footer{
+				display: flex;
+				flex-wrap: wrap;
+				padding: 1em;
+				box-sizing: border-box	;
+				font-size: 1.5em;
+				height: fit-content;
+				align-items: flex-start;
+				justify-items: flex-start;
+				gap: 2em;
+
+
+			}
+
+			.footer-menu-ad{
+				display: inline-flex;
+			    align-content: center;
+			    justify-content: center;
+			    align-items: center;
+			    justify-items: center;
+				line-height: 87%;
+				color: var(--grey);
+				text-decoration: none;
+				border: solid 1px;	
+				border-radius: .5em;
+				padding: .5em .5em .5em .5em;
+				font-size: .7em;
+				width: 100%;
+
+
+			}
+
+			.animated-logo{
+				height: 1em;
+
+			}
+
+			.footer-logo{
+				font-size: 1em;
+				line-height: 87%;
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+				gap:  .5em;
+
+
+			}
+			
+
+			.cta-button{
+				padding: 1em 1em .5em 1em;
+				border-radius: 1em;
+				box-sizing: border-box;
+				width: 94%;
+				flex-wrap: wrap;
+				margin: 1em auto;
+				line-height: 87%;
+				margin-top: 2em;
+			}
+
+			.headings{
+
+				width: 100%;
+
+			}			
+
+			.divider-small{
+				display: block;
+				height: 2em;
+				width: 100%;
+			}
+
+				img.image-cover{
+				display: none;}
+
+				.image-cover{
+					display: flex;
+					width: 100%;
+					height: 75vh;
+					background-image: url(https://static.tildacdn.com/tild6462-6561-4430-b035-376338356230/cover.jpeg);
+					background-position: center;
+					background-size: cover;
+					z-index: 2;
+					margin-bottom: 2em;
+				}
+				.wrapper{
+					display: flex;
+					flex-direction: column;
+				}
+
+	  			.left-wrapper {
+	  				width: 100%;
+	  				padding: 1em;
+	  				max-width: none;
+	  			}	
+
+	  			.right-wrapper {
+	  				width: 100%;
+	  				padding: 1em;  
+	  				max-width: none; 				 
+	 			}
+
+	 			.headings{
+	 				padding: 1.5em 1em 1em 1em;
+	 				box-sizing: border-box;
+	 			}
+
+	 			h1{
+	 				font-size: 3.5em;
+	 				line-height: 90%;
+	 			}
+
+	 			h2{
+	 				font-size: 1.5em;
+	 			}
+	 			h4{
+	 				font-size: 1em;
+	 			}
+	 			p{
+	 				font-size: 1em;
+	 			}
+	 		}
+
+
+		</style>
+
+
+		<div class="wrapper">
+			<div class="header">
+				<div class="header-logo">
+					<img class="animated-logo" src="https://static.tildacdn.com/tild6663-3032-4765-b362-626435626333/pra-logo-animation-u.gif">
+
+					<a class="header-logo" href="/">pocket&nbsp;rocket</a>
+				</div>
+				<div class="header-menu">
+					<a class="header-menu" href="/about">About</a>
+					<a class="header-menu" href="/contact">Contact</a>
+				</div>
+			</div>
+			<div class="hero-section">
+				<div class="hero-title">
+					<h1>3D Viewer for Bags</h1>
+					<h2 class="hero-heading">Wanna 3D solution provides your customers with a&nbsp;novel experience to understand the&nbsp;size and capacity of a&nbsp;bag as if they had&nbsp;it in their hands</h2>
+					<div class="hero-title-tags">
+						<p>Suitable for</p>
+						<div class="tag">
+							<p>Web</p>
+						</div>
+						<div class="tag">
+							<p>iOS</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="hero-content">
+					<iframe 
+						name="wanna 3d bags" 
+						src="https://webar.wanna.fashion/3dbags/"
+						frameborder="0"
+						loading="eager" 
+						height="100%"
+						width="100%" 
+						>
+					</iframe>					
+				</div>
+			</div>
+
+			<div class="heading">
+				<h2 class="heading">Why would you use it?</h2>
+			</div>
+			<div class="divider"></div>
+			<div class="features">
+				<div class="features-heading">
+					<div class="tag">
+						<h3>1</h3>
+					</div>	
+					<h3>3D Viewer for Bags increases customer confidence in purchase and allows to:</h3>
+				</div>
+				<div class="features-text">
+					<p>Zoom in and out</p>
+					<p>Explore the details from every angle</p>
+					<p>Get a better understanding of the material, texture and craftsmanship</p>
+					<p>Make informed shopping decisions</p>
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div class="features">
+				<div class="features-heading">
+					<div class="tag">
+						<h3>2</h3>
+					</div>	
+					<h3>It reduces returns and carbon footprint:</h3>
+				</div>				
+				<div class="features-text">
+					<p>Our 3D experience tackles major industry pain point where customers return bags due to unmet size expectations</p>
+					<p>A capacity widget showing which types of objects could fit into a bag: mobile phone, glasses case, bottle 0.5L, etc</p>
+					<p>This leads to returns decreasing and evidently contributes to sustainable development</p>
+				</div>
+			</div>
+
+			<div class="features-highlight">
+				<div class="features-heading">
+					<div class="tag">
+						<h3>3</h3>
+					</div>
+					
+					<h3>Finally, your business bridges the gap between products and customers:</h3>
+				</div>				
+				<div class="features-statistics">
+					<div class="statistic-line">
+						<p>Engagement<br>increase</p>
+						<div class="statistic-number">
+							<p>↑32%</p>
+						</div>						
+					</div>
+
+					<div class="statistic-line">
+						<p>Conversion rate<br>increase</p>
+						<div class="statistic-number">
+							<p>↑4%</p>
+						</div>						
+					</div>		
+
+					<div class="statistic-line">
+						<p>Returns<br>decrease</p>
+						<div class="statistic-number">
+							<p>↓9%</p>
+						</div>						
+					</div>
+				</div>
+				
+			</div>			
+
+			<div class="heading">
+				<h2 class="heading">Why choose Wanna?</h2>
+			</div>			
+
+			<div class="features">
+				<div class="feature">
+					<h3>State-of-the-art image quality</h3>
+					<p>The high-end quality of our 3D assets creates smooth and realistic visuals.</p>
+				</div>
+				<div class="feature">
+					<h3>Easy Implementation</h3>
+					<p>We provide low code solutions that could be implemented without significant time and labor costs.</p>
+				</div>
+				<div class="feature">
+					<h3>3D content creation expert</h3>
+					<p>We provide premium-level 3D models and optimize them to be lightweight and work quickly in immersive experiences.</p>
+				</div>	
+				<div class="feature">
+					<h3>Dedicated customer service</h3>
+					<p>We delve into our partners' business and tailor tech solutions to their individual needs. Our team is highly trained and dedicated to ensuring that every customer's needs are met in a timely and efficient manner.</p>
+				</div>												
+			</div>
+
+			<div class="heading">
+				<h2 class="heading">We are trusted by</h2>
+			</div>
+
+			<div class="partners">
+				<div class="partner-logo">
+					<img src="">
+				</div>
+				<div class="partner-logo">
+					<img src="">
+				</div>
+				<div class="partner-logo">
+					<img src="">
+				</div>
+				<div class="partner-logo">
+					<img src="">
+				</div>
+				<div class="partner-logo">
+					<img src="">
+				</div>																
+			</div>
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" preload="preload" playsinline style="width: 100%; height: auto;">
+	            <source src="https://dl.dropboxusercontent.com/s/glonb9z2wbbb5n1/Mats_fullscreen.mp4?dl=0">
+	        </video>   	
+
+
+			<div class="left-wrapper">
+					<h1>One Playground. 
+						<br>Endless experience
+					</h1>
+				<div class="text-block">
+					<h4>Industry:</h4>	
+					<h4>Health & Lifestyle.</h4>
+				</div>
+			</div>
+			<div class="right-wrapper">
+				<div class="text-block">
+					<h2>Background</h2>
+					<p> Fitness Playground is one of Australia's largest gym chains. Over time, they expanded their offerings to include yoga, dancing, wellness, and other classes in addition to physical training.</p>
+					<p> All that was left was to change the name, positioning the business from a local gym to a wellness multi-boutique with a wide like-minded community and spice it up with a great visual style.</p>					
+				</div>
+				<div class="text-block">
+					<h2>Insight</h2>
+					<p>We go to several gyms and studios and buy a lot of memberships with the intention of ditching them one day. At OnePlayground, you may purchase a single Membership Card and live through all kinds of Endless Experiences, including comfortable facilities and professional trainers.</p>
+				</div>
+				<div class="text-block">
+					<h2>Endless Experiences — Literally</h2>
+					<p>We created a single layered design system with an updated logo and icon that, combined with the Endless Experiences slogan, expressive imagery, and media-appropriate motion graphics, literally shows the endless possibilities within one site.</p>
+				</div>
+			</div>
+
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" preload="preload" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/9xzr4750gih4cdl/logo.mp4?dl=0">
+	        </video>   			
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/vrtzeo4osonxn4z/Phone_Other_Order_Fin.mp4?dl=0">
+	        </video>   	
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" preload="preload" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/9ei3au111pcu4z0/logo_on_images.mp4?dl=0">
+	        </video>   			        	
+
+
+
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild6339-6234-4264-b030-663036373034/tagline.png" alt="One Playground">
+	        </div>		
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3334-6562-4335-a130-643733356462/Training.png" alt="One Playground">
+	        </div>		        
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted"  playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/jcv0gu46pnt2wxa/images_between.mp4?dl=0">
+	        </video>   			
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3436-3661-4830-a464-356461343034/board.png" alt="One Playground">
+	        </div>	
+
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3934-3866-4361-a130-613238303139/site.png" alt="One Playground">
+	        </div>	
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3330-3836-4134-b639-396634323166/Icon_1.png" alt="One Playground">
+	        </div>		
+
+
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/vz2bvg2pcgycjs9/web.mp4?dl=0">
+	        </video>   	
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" preload="preload" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/ybw3zv57f194ok5/interior_card.mp4?dl=0">
+	        </video>   			        	
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3830-3135-4662-b964-656232626135/board2.png" alt="One Playground">
+	        </div>	
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3636-3436-4532-b530-373033306135/hoody.png" alt="One Playground">
+	        </div>		   
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3166-3230-4661-b166-336531316533/phone_hat.png" alt="One Playground">
+	        </div>	
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/vb4ommpvqzjq9lz/bottle_insta_loop.mp4?dl=0">
+	        </video>   	
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild3765-6333-4561-b230-303363376364/box.png" alt="One Playground">
+	        </div>		   
+
+	        <div class="image-full">
+	        	<img class="image-full" src="https://static.tildacdn.com/tild6430-6537-4161-b336-346466663839/chair_navigation.png" alt="One Playground">
+	        </div>		        
+
+			<video class="cases-full" autoplay="autoplay" loop="loop" muted="muted" playsinline>
+	            <source src="https://dl.dropboxusercontent.com/s/s3ueg2d1e6n5xg6/Layouts_Final_3D.mp4?dl=0">
+	        </video>   	
+
+	    <a class="cta-button" href="https://pocketrocket.agency/contact">
+		    <div class="">
+		    	<h2>Have a&nbsp;project in&nbsp;mind? Drop&nbsp;us a&nbsp;line</h2>
+		    	
+		    </div>
+		</a>
+		<div class="footer" >
+				<div class="footer-logo">
+					<p>Pocket Rocket Agency</p>
+									<a class="footer-menu-ad" href="https://clutch.co/profile/pocket-rocket-agency?utm_source=widget&utm_medium=14&utm_campaign=widget&utm_content=stars#focus">5 star rated on Clutch</a>
+
+				</div>
+
+				<div class="footer-menu">
+
+					<a class="footer-menu" style="display: inline-block; width: fit-content;" href="https://www.behance.net/pocketrocketagency">Behance</a>
+					<a class="footer-menu" style="display: inline-block; width: fit-content;;" href="https://www.linkedin.com/company/pocket-rocket-poland/">Linkedin</a>
+					<a class="footer-menu" style="display: inline-block; width: fit-content;;" href="https://www.instagram.com/pocketrocket_agency/">Instagram</a>				
+				</div>
+
+
+
+		</div>
+		</div>
+
+
+		<script type="text/javascript">
+			
+
+			var detailsElements = document.querySelectorAll('h1, h2, h4, p, li');
+
+			let awaker = function() {
+			  for (let i = 0; i < detailsElements.length; i++) {
+			    let detailsElement = detailsElements[i];
+			    let rect = detailsElement.getBoundingClientRect();
+			    if (rect.top < window.innerHeight && rect.bottom > 0) {
+			      detailsElement.classList.add('awake');
+			    } else {
+			      detailsElement.classList.remove('awake');
+			    }
+			  }
+			};
+
+			document.addEventListener('scroll', awaker);
+		</script>
+
+
+
+	</body>
+	</html>

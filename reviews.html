@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="review-card">
+            <div class="review-heading">
+                <div class="review-logo">
+                    <div class="partner-logo"></div>
+                    <div class="partner-name">
+                        Farfetch
+                    </div>
+                </div>
+                <div class="quote-symbol">
+                    <div class="partner-logo"></div>
+                </div>
+            </div>
+            <p>The Virtual Try On technology gave our app a differentiator that set us apart from our competition. Our best customers love the ability to try on shoes at home on our app and the majority of our 5 star reviews say how amazing the Virtual Try On is.</p>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide">
+        <div class="review-card">
+            <div class="review-heading">
+                <div class="review-logo">
+                    <div class="review-partner-logo"></div>
+                    <div class="partner-name">
+                        Farfetch
+                    </div>
+                </div>
+                <div class="quote-symbol">
+                    <div class="partner-logo"></div>
+                </div>
+            </div>
+            <p>The Virtual Try On technology gave our app a differentiator that set us apart from our competition. Our best customers love the ability to try on shoes at home on our app and the majority of our 5 star reviews say how amazing the Virtual Try On is. The Virtual Try On technology gave our app a differentiator that set us apart from our competition. Our best customers love the ability to try on shoes at home on our app and the majority of our 5 star reviews say how amazing the Virtual Try On is.</p>
+        </div>
+      </div>
+
+
+      <div class="swiper-slide">Slide 3</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+        
+  </div>
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,  
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+    });
+  </script>
+</body>
+
+</html>

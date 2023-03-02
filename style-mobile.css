@@ -36,7 +36,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 80vh;
+        height: 70vh;
         padding: 3rem;
     }
     .hero-title h1{
@@ -204,6 +204,7 @@
     }
     
     .statistic-line{
+        font: 'Suisse Intl';
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -211,6 +212,7 @@
         padding-bottom: 1rem;
         border-bottom: solid 1px var(--grey);
         transform: translateY(70px);
+        opacity: 0;
         
     }
     

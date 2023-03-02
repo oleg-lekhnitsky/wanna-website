@@ -165,7 +165,9 @@ body, html{
     overflow: hidden;
     border-radius: 40px;
 }
-
+iframe .styles__header__3Q5OD{
+    display: none;
+}
 .heading{
     display: flex;
     align-items: center;

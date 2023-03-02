@@ -36,3 +36,10 @@ function startCounting(number) {
         }
     }
     }
+
+
+    function myFunction() {
+        var iframe = document.getElementById("bag-viewer");
+        var elmnt = iframe.contentWindow.document.getElementsByClassName("styles__header__3Q5OD")[position];
+        elmnt.style.display = "none";
+      }

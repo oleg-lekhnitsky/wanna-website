@@ -298,7 +298,9 @@ opacity:1
 
 .statistic-line p {
 display:inline-flex;
-width:fit-content
+width:fit-content;
+font-feature-settings: "tnum";
+
 }
 
 .statistic-number {

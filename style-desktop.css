@@ -1,9 +1,13 @@
 *{
     box-sizing: border-box;
     flex-wrap: wrap;
+    font-family: 'Suisse Intl';
+    font: 'Suisse Intl';
+    font-weight: 400;
+    font-display: swap;
 }
 body, html{
-    font: 'Suisse Intl';
+    
     -webkit-text-size-adjust: 100%;
     margin: 0;
     padding: 0;

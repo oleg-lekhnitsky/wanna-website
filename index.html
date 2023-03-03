@@ -6,6 +6,7 @@
 		<link href="style-desktop.css" rel="stylesheet">
 		<link href="style-mobile.css" rel="stylesheet">
 		<link href="stylesheet.css" rel="stylesheet">
+		<link href="./cssmenu/cssmenu/cssmenu.css" rel="stylesheet">		
 		<style type="text/css">
 			/*@font-face {
 				font-family: 'SuisseIntl';
@@ -25,28 +26,75 @@
 
 
 		<div class="wrapper">
-			<div class="header">
-				<div class="header-logo">
-					<img class="animated-logo" src="https://static.tildacdn.com/tild6663-3032-4765-b362-626435626333/pra-logo-animation-u.gif">
+			<div id="menuDemo">
+				<!--start CssMenu-->
+				<div class="menu-icon-wrapper">
+					<a class="header-logo" href="/">
+						<img class="animated-logo" src="https://static.tildacdn.com/tild3334-6431-4935-a534-346435636237/wanna_white_logo-05.svg">
+					</a>					
+					<div class="menu-icon" onclick="toggleCssMenu(this)">
+						<div class="three-line">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+				<div id="cssmenu">
+					<ul>
+						<li >
+							
+								<a class="header-logo" href="/">
+									<img class="animated-logo" src="https://static.tildacdn.com/tild3334-6431-4935-a534-346435636237/wanna_white_logo-05.svg">
+								</a>
+         
+						</li>
+					</ul>
+					<ul>
+						<li><a href="#">Footwear</a></li>
+						<li><a href="#">Watches</a></li>
+						<li><a href="#">Bags</a></li>
+						<li><a href="#">Use Cases</a></li>
+						<li><a href="#">Press</a></li>
+						<li><a href="/">CN</a></li>
+					</ul>						
+					<ul>
+						
+						<li><a class="cta" href="#">Contact</a></li>
+					</ul>						
 
-					<a class="header-logo" href="/">pocket&nbsp;rocket</a>
 				</div>
-				<div class="header-menu">
-					<a class="header-menu" href="/about">About</a>
-					<a class="header-menu" href="/contact">Contact</a>
-				</div>
-			</div>
+				<script>
+					function toggleCssMenu(icon) {
+						var cssmenu = document.getElementById('cssmenu');
+						if (icon.className.indexOf('active') == -1) {
+							icon.className = 'menu-icon active';
+							cssmenu.style.display = "flex";
+							setTimeout(function(){cssmenu.className = 'active';},200);            
+						}
+						else {
+							icon.className = 'menu-icon';
+							cssmenu.className = '';
+							setTimeout(function(){cssmenu.style.display = "none";},511); 
+						}
+					}
+				</script>
+				<!--end CssMenu-->
+				</div>			
+
 			<div class="hero-section">
 				<div class="hero-title">
 					<h1>3D Viewer for Bags</h1>
 					<h2 class="hero-heading">Wanna 3D solution provides your customers with a&nbsp;novel experience to understand the&nbsp;size and capacity of a&nbsp;bag as if they had&nbsp;it in their hands</h2>
 					<div class="hero-title-tags">
 						<p>Suitable for</p>
-						<div class="tag">
-							<p>Web</p>
-						</div>
-						<div class="tag">
-							<p>iOS</p>
+						<div class="tags-wrapper">
+							<div class="tag">
+								<p>Web</p>
+							</div>
+							<div class="tag">
+								<p>iOS</p>
+							</div>
 						</div>
 					</div>
 					
@@ -65,7 +113,7 @@
 			</div>
 
 			<div class="heading">
-				<h2 class="heading">Why would you use it?</h2>
+				<h2 class="heading">Why would you use&nbsp;it?</h2>
 			</div>
 			<div class="divider"></div>
 			<div class="features">
@@ -92,11 +140,11 @@
 				</div>				
 				<div class="features-text">
 					<p>Our 3D experience tackles major industry pain point where customers return bags due to unmet size expectations</p>
-					<p>A capacity widget showing which types of objects could fit into a bag: mobile phone, glasses case, bottle 0.5L, etc</p>
+					<p>A capacity widget showing which types of objects could fit into a bag: mobile phone, glasses case, bottle 0.5L, etc.</p>
 					<p>This leads to returns decreasing and evidently contributes to sustainable development</p>
 				</div>
 			</div>
-
+			<div class="divider"></div>
 			<div class="features-highlight">
 				<div class="features-heading">
 					<div class="tag">
@@ -109,8 +157,8 @@
 					<div class="statistic-line">
 						<p>Engagement<br>increase</p>
 						<div class="statistic-number">
-							<p>↑</p>
-							<div class="number number-1" data-number="32">0</div>
+							<p>&#8593;</p>
+							<p class="number number-1" data-number="32">0</p>
 							<p>%</p>
 						</div>						
 					</div>
@@ -119,7 +167,7 @@
 						<p>Conversion rate<br>increase</p>
 						<div class="statistic-number">
 							<p>↑</p>
-							<div class="number number-2" data-number="4">0</div>
+							<p class="number number-2" data-number="4">0</p>
 							<p>%</p>
 						</div>					
 					</div>		
@@ -128,7 +176,7 @@
 						<p>Returns<br>decrease</p>
 						<div class="statistic-number">
 							<p>↓</p>
-							<div class="number number-3" data-number="9">0</div>
+							<p class="number number-3" data-number="9">0</p>
 							<p>%</p>
 						</div>						
 					</div>
@@ -181,7 +229,10 @@
 				</div>
 				<div class="partner-logo">
 					<img src="">
-				</div>																
+				</div>															
+				<div class="heading">
+					<h2 class="heading-message">Let's talk about accelerating your digital strategy with 3D and AR experience! </h2>
+				</div>					
 			</div>
 
 			

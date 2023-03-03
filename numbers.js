@@ -19,7 +19,7 @@ observer.observe(number);
 
 function startCounting(number) {
     const finalValue = parseInt(number.dataset.number);
-    const duration = 2000; // duration of counting animation in milliseconds
+    const duration = 1500; // duration of counting animation in milliseconds
     const step = Math.abs(finalValue - 0) / duration * 10; // calculate step based on duration
     
     let startValue = 0;
@@ -37,9 +37,3 @@ function startCounting(number) {
     }
     }
 
-
-    function myFunction() {
-        var iframe = document.getElementById("bag-viewer");
-        var elmnt = iframe.contentWindow.document.getElementsByClassName("styles__header__3Q5OD")[position];
-        elmnt.style.display = "none";
-      }

@@ -1,0 +1,388 @@
+#menuDemo{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    margin-top: .5rem;
+    padding: 0 1rem;
+}
+#cssmenu
+{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--black);
+    text-align:center;
+    font-family:"Suisse Intl";
+    line-height:100%;
+    -webkit-text-size-adjust:100%;
+    margin:0;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    font-size:1rem;
+    --widtha:100vw;
+    --grey:#F1F1F1;
+    --black:#000;
+    --blue:#41A1D4;
+    --ocher:#EBC814;
+    --accent: #DEFF1D;
+}
+#cssmenu ul
+{
+    width:auto;
+    display:flex;
+    font-size:0;
+    text-align:center;
+    color: var(--grey);
+    gap: .25rem;
+    border: transparent;
+    margin:0; 
+    padding:0;
+    list-style:none;
+    position:relative;
+    z-index:999;
+    border-radius: 3px;
+} 
+
+#cssmenu li
+{
+    display:inline-block;
+    position:relative;    
+    font-size:0; 
+    margin:0;
+    padding:0;
+}
+
+
+/*Top level items
+---------------------------------------*/
+
+#cssmenu >ul>li>span, #cssmenu >ul>li>a 
+{   
+    font-size:1rem;
+    color:inherit;
+    text-decoration:none;
+    padding:.5rem; 
+    padding-bottom: .4rem;
+    font-weight:400;
+    letter-spacing: 0;   
+    display:block;   
+    position:relative;
+    transition: all ease-out 400ms; 
+}
+#cssmenu li:hover > span, #cssmenu li:hover > a
+{  
+    color:var(--accent);
+    transition:all ease-in 50ms;
+}
+#cssmenu .cta{
+    background-color: var(--accent);
+    color: var(--black);
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+#cssmenu .cta:hover{
+    background-color: var(--grey);
+    color: var(--black);
+}
+/*Sub level items
+---------------------------------------*/
+#cssmenu .dropdown
+{
+    text-align:center;
+    left:0;
+    font-family:inherit;
+    color: #222222;
+    background-color:#FFFFFF;
+    border:none;
+    position:absolute;
+    display:none;
+    opacity:0;
+    cursor:default;
+}
+
+#cssmenu .dropdown li {
+    display: flex;  
+}
+
+#cssmenu .dropdown li > span, #cssmenu .dropdown li > a, #cssmenu .clm a, #cssmenu .clm h3 
+{
+    font-size:16px;
+    font-weight:400;
+    font-family:inherit;
+    margin:0;
+    padding:8px 20px; 
+    display:block;
+    color:inherit;
+    text-decoration:none;
+}
+#cssmenu .clm h3 {
+    font-size:20px;
+    font-weight:700;
+}
+#cssmenu .sub-item {
+    background-color:#FFFFFF;
+    position:relative;       
+    transition:all 0.3s;
+}
+
+#cssmenu .dropdown li:hover > span, #cssmenu .dropdown li:hover > a
+{
+
+    color:#000000;
+    background-color:#EEEEEE;
+}
+
+#cssmenu .clm a:hover
+{
+    color:#000000;
+    transition:color 0.2s;
+}
+
+#cssmenu .dropdown.right0 {left:auto;right:0;} 
+#cssmenu .dropdown li > .dropdown.right0 {left:auto;right:100%;} 
+       
+#cssmenu li.full-width{
+    position:static;
+}
+#cssmenu li.full-width .dropdown{
+    width:100%;
+    left:0;
+    box-sizing:border-box;
+}  
+
+#cssmenu li:hover > .dropdown
+{
+    display:block;
+    opacity:1;
+    z-index:1;
+}
+
+#cssmenu .dropdown li > .dropdown
+{
+    left:100%; right:auto;
+    top:0;
+}
+
+#cssmenu ul.dropdown
+{
+    min-width:240px; /* Sub level menu min width */
+}
+
+#cssmenu div.dropdown  {
+    text-align:center;
+}
+
+/* each column */
+#cssmenu .clm
+{
+    text-align:left;
+    margin:20px;
+    vertical-align:top;/*or middle*/
+    width:auto;
+    min-width:240px;
+    display:inline-block;
+    *display:inline;*zoom:1;
+}
+
+#cssmenu .clm a:hover
+{
+    color:#000000;
+    text-decoration:underline;
+}
+
+/*-----------Arrows----------------*/
+#cssmenu .arrow {
+    color:inherit;
+    border-style:solid; border-width:2px 2px 0 0; padding:5px; transform:rotate(135deg);margin-top:-10px;margin-left:5px;
+    position:relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align:middle;
+    overflow:hidden;/*for IE6*/
+}
+        
+#cssmenu .dropdown .arrow {
+    transform:rotate(45deg);
+    top:50%;margin-top:-7px;
+    position:absolute;left:auto;right:20px;
+} 
+
+/*######## styles for mobile mode */
+
+
+
+#menuDemo .menu-icon-wrapper {
+    display: none;
+    position: static;
+}
+
+@media only screen and (max-width: 800px) {
+    #menuDemo{
+        padding: 0;
+        width: 100%;
+        position: static;
+        z-index: 999;
+    }
+
+    .menu-icon, .menu-icon-wrapper {display:block;}
+
+    #cssmenu  {
+        
+        width:100%;
+        display:none;
+        background-color:#FFFFFF;
+        box-sizing:border-box;
+        z-index:999;
+    }
+
+    /*--begin mark1--*/
+
+    #menuDemo #cssmenu  {
+        position: fixed;
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+        top:-100%;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 2rem 1rem 4rem 1rem;
+        background-color: var(--black);
+        transition:all 411ms cubic-bezier(.7, 0,1,.4);
+    }
+
+    #menuDemo #cssmenu.active {
+        background-color: var(--black);
+        top:0;
+        transition:all 400ms cubic-bezier(.16,.76,.45,1);
+    }
+
+    #cssmenu .header-logo{
+        display: none;
+    }
+
+    #mcmenu {z-index:999;}
+
+.menu-icon.active {z-index:9999999999;position:relative;}
+
+    /*--end mark1--*/
+
+    #cssmenu ul  {
+        display: flex;
+        flex-direction: column;
+        background-color:transparent;
+        transition:all 400ms ease-in;
+        box-sizing:border-box;
+        border:none;
+        border-radius: 0;
+        gap: 1rem;
+    }
+
+    #cssmenu .mobileHide {
+        display:none;
+    }
+
+    #cssmenu li {
+        display:block;
+        padding: 0;
+        position:static;
+    }
+
+    #cssmenu >ul>li>span, #cssmenu >ul>li>a 
+    {       
+        font-size:1.75rem;
+        line-height: 100%;
+        letter-spacing: -1px;
+        padding: 0;
+    }
+    /* #cssmenu li:hover span, #cssmenu li:hover a {
+     
+        color:#000000;
+        background-color:#FFFFFF;
+
+
+    }*/
+
+    #menuDemo .menu-icon-wrapper {
+        display: flex;
+        position: fixed;
+        top: -1px;
+        background-color: var(--black);
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        text-align:right;
+        z-index: 999999999;
+    }
+}
+/*----------- menu-icon ----------------*/
+
+.menu-icon {
+
+    cursor: pointer;
+    outline: none;
+    background-color:transparent;
+    border-radius:3px;
+    transition: all 0.25s ease-out;
+    user-select:none;
+    box-sizing:content-box;
+    font-size:0;
+    position:relative;
+    z-index: 999;
+}
+
+.menu-icon.active{
+    background-color:transparent;
+}
+.three-line{
+  width: 28px;
+  height: 18px;
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+}
+.three-line span{
+  background-color: var(--grey);
+  position: absolute;
+  border-radius: 2px;
+  transition: transform .5s ease-in-out;
+  width:100%;
+  height: 2px;
+  left: 0;
+  transform: rotate(0);
+}
+.three-line span:nth-child(1){
+  top:0;
+}
+.three-line span:nth-child(2){
+  top:8px;
+  visibility:visible;
+}
+.three-line span:nth-child(3){
+  bottom:0;
+}
+.menu-icon.active .three-line span:nth-child(1){
+  transform: rotate(225deg);
+  top: 8px;
+}
+.menu-icon.active .three-line span:nth-child(2){
+  transform: rotate(180deg);
+  visibility:hidden;
+}
+.menu-icon.active .three-line span:nth-child(3){
+  transform: rotate(315deg);
+  top: 8px;
+}
+
+/*End of styles for mobile mode ########*/
+@keyframes topItemAnimation{
+  from {opacity: 0;  transform:translate3d(0px, 0, 0);}
+  to {opacity: 1; transform:translate3d(0, 0, 0);}
+}
+#cssmenu li a {animation:none;}
+#cssmenu.active li a { animation: topItemAnimation 0.2s ease-in 0.2s backwards;}
+
+

@@ -260,6 +260,9 @@
         font-size: 2rem;
         padding: 0 1rem;
     }
+    .heading-message{
+        margin-top: 0;
+    }
     h2.heading-message{
         width: 100%;
         font-size: 1.5rem;

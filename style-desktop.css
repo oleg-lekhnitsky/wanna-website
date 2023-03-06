@@ -349,7 +349,7 @@ transition:all ease-out 400ms
 }
 
 a:hover {
-color:var(--blue);
+color:var(--accent);
 transition:all ease-in 20ms;
 
 }

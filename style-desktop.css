@@ -349,7 +349,8 @@ transition:all ease-out 400ms
 
 a:hover {
 color:var(--blue);
-transition:all ease-in 20ms
+transition:all ease-in 20ms;
+
 }
 
 .header-logo,.header-menu,.footer-logo {
@@ -421,51 +422,7 @@ display:block;
 height:10em
 }
 
-#loader {
-display:flex;
-align-content:center;
-justify-content:center;
-align-items:center;
-justify-items:center;
-margin:0;
-width:100%;
-height:100vh;
-z-index:10;
-color:var(--grey);
-border-radius:0;
--webkit-animation:loading 3s ease-out;
-animation:loading 3s ease-out
-}
 
-@-webkit-keyframes loading {
-0% {
-opacity:0
-}
-
-100% {
-opacity:1
-}
-}
-
-@keyframes loading {
-0% {
-opacity:0
-}
-
-100% {
-opacity:1
-}
-}
-
-#myDiv {
-color:var(--grey);
-background-color:#000;
-display:flex;
-width:100%;
-flex-wrap:wrap;
-box-sizing:border-box;
-opacity:1
-}
 
 h1,h2,h3,h4,p,a {
 margin:0;
@@ -596,15 +553,7 @@ margin-bottom:1em;
 box-sizing:border-box
 }
 
-.cases-full {
-width:100%;
-background-color:#000
-}
 
-.cases-center {
-width:76%;
-background-color:#000
-}
 
 img {
 width:100%
@@ -630,158 +579,4 @@ padding-left:calc(var(--widthA) / 40)
 
 h2.headings {
 hyphens:none
-}
-
-@media (max-width: 768px) {
-.header {
-display:flex;
-justify-content:space-between;
-color:var(--grey);
-font-size:1em;
-box-sizing:border-box;
-position:fixed;
-width:100%;
-transition:all ease-out 300ms;
-background-color:var(--grey);
-z-index:999;
-padding:.25em 1em
-}
-
-a.header-menu,.header-logo {
-border-radius:0;
-background-color:var(--grey 1)
-}
-
-a.header-logo {
-width:auto
-}
-
-.footer-menu {
-display:inline-flex;
-flex-wrap:wrap;
-font-size:1em;
-line-height:87%;
-align-content:flex-start;
-align-items:flex-start;
-justify-items:flex-start;
-justify-content:space-between;
-width:100%;
-gap:.9em
-}
-
-.footer {
-display:flex;
-flex-wrap:wrap;
-padding:1em;
-box-sizing:border-box;
-font-size:1.5em;
-height:fit-content;
-align-items:flex-start;
-justify-items:flex-start;
-gap:2em
-}
-
-.footer-menu-ad {
-display:inline-flex;
-align-content:center;
-justify-content:center;
-align-items:center;
-justify-items:center;
-line-height:87%;
-color:var(--grey);
-text-decoration:none;
-border:solid 1px;
-border-radius:.5em;
-padding:.5em;
-font-size:.7em;
-width:100%
-}
-
-.animated-logo {
-height:1em
-}
-
-.footer-logo {
-font-size:1em;
-line-height:87%;
-display:flex;
-flex-wrap:wrap;
-width:100%;
-gap:.5em
-}
-
-.cta-button {
-padding:1em 1em .5em;
-border-radius:1em;
-box-sizing:border-box;
-width:94%;
-flex-wrap:wrap;
-margin:1em auto;
-line-height:87%;
-margin-top:2em
-}
-
-.headings {
-width:100%
-}
-
-.divider-small {
-display:block;
-height:2em;
-width:100%
-}
-
-img.image-cover {
-display:none
-}
-
-.image-cover {
-display:flex;
-width:100%;
-height:75vh;
-background-image:url(https://static.tildacdn.com/tild6462-6561-4430-b035-376338356230/cover.jpeg);
-background-position:center;
-background-size:cover;
-z-index:2;
-margin-bottom:2em
-}
-
-.wrapper {
-display:flex;
-flex-direction:column
-}
-
-.left-wrapper {
-width:100%;
-padding:1em;
-max-width:none
-}
-
-.right-wrapper {
-width:100%;
-padding:1em;
-max-width:none
-}
-
-.headings {
-padding:1.5em 1em 1em;
-box-sizing:border-box
-}
-
-h1 {
-font-size:3.5em;
-line-height:90%
-}
-
-h2 {
-font-size:1.5em
-}
-
-h4 {
-font-size:1em
-}
-
-p {
-font-size:1em
-}
 }

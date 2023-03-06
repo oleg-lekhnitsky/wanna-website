@@ -19,6 +19,7 @@ font-size:18px;
 --blue:#41A1D4;
 --ocher:#EBC814;
 --accent: #DEFF1D;
+--accent-sec: #7980FC;
 }
 
 iframe {
@@ -343,7 +344,7 @@ h2.heading-message {
     hyphens: none;
     }
 a {
-color:var(--black);
+color:var(--accent-sec);
 transition:all ease-out 400ms
 }
 

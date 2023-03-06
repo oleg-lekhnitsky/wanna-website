@@ -431,7 +431,8 @@ padding:0;
 font-family:'Suisse Intl',sans-serif;
 font-weight:400;
 -webkit-font-smoothing:antialiased;
-hyphens:auto
+text-decoration: none;
+
 }
 
 h1 {

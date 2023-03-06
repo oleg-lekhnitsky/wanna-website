@@ -26,6 +26,7 @@
     --blue:#41A1D4;
     --ocher:#EBC814;
     --accent: #DEFF1D;
+    --accent-sec: #7980FC;
 }
 #cssmenu ul
 {
@@ -83,7 +84,7 @@
 }
 
 #cssmenu .cta:hover{
-    background-color: var(--grey);
+    background-color: var(--accent-sec);
     color: var(--black);
 }
 /*Sub level items

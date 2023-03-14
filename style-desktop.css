@@ -144,12 +144,14 @@ margin-top:1rem
 
 .tag {
 display:inline-flex;
-font-feature-settings:tnum;
+font-feature-settings:"tnum";
 height:fit-content;
 border:solid 1px var(--grey);
 padding:.5rem;
 border-radius:15px
 }
+
+
 
 .hero-title-tags p {
 display:inline-flex;
@@ -310,7 +312,7 @@ display:flex
 
 .number {
 font-size:calc(var(--widthA) / 30);
-font-feature-settings:tnum
+font-feature-settings:"tnum"
 }
 
 .statistic-number p {

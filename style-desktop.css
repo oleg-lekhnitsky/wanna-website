@@ -13,7 +13,7 @@ margin:0;
 padding:0;
 background-color:#000;
 font-size:18px;
---widtha:100vw;
+--widthA: 100vw;
 --grey:#F1F1F1;
 --black:#000;
 --blue:#41A1D4;
@@ -144,7 +144,7 @@ margin-top:1rem
 
 .tag {
 display:inline-flex;
-font-feature-settings:tnum;
+font-feature-settings: 'tnum';
 height:fit-content;
 border:solid 1px var(--grey);
 padding:.5rem;
@@ -265,7 +265,7 @@ gap:1rem
 .features-text {
 display:flex;
 width:50%;
-gap:.5rem
+gap:1rem
 }
 
 .features-heading h3 {
@@ -310,7 +310,7 @@ display:flex
 
 .number {
 font-size:calc(var(--widthA) / 30);
-font-feature-settings:tnum
+font-feature-settings: "tnum";
 }
 
 .statistic-number p {

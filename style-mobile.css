@@ -1,3 +1,19 @@
+body,html {
+    -webkit-text-size-adjust:100%;
+    margin:0;
+    padding:0;
+    background-color:#000;
+    font-size:18px;
+    --widthA: 100vw;
+    --grey:#F1F1F1;
+    --black:#000;
+    --blue:#41A1D4;
+    --ocher:#EBC814;
+    --accent: #DEFF1D;
+    --accent-sec: #7980FC;
+    }
+
+
 @media (max-width: 768px) {
     .wrapper{
         color: var(--grey);

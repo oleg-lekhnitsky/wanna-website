@@ -267,7 +267,7 @@ gap:1rem
 .features-text {
 display:flex;
 width:50%;
-gap:1rem
+gap: 1.25rem;
 }
 
 .features-heading h3 {

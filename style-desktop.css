@@ -272,7 +272,7 @@ gap: 1.25rem;
 
 .features-text p{
     border-bottom: solid 1px var(--grey);
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 }
 
 .features-heading h3 {

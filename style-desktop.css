@@ -270,6 +270,10 @@ width:50%;
 gap: 1.25rem;
 }
 
+.features-text p{
+    border-bottom: solid 1px var(--grey);
+}
+
 .features-heading h3 {
 width:70%
 }

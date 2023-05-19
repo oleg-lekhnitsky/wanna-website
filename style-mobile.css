@@ -32,7 +32,11 @@ body,html {
         margin: 0;
         display: none;
     }
+
+
     .hero-section{
+        margin: 2rem 1rem ;
+        
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -52,13 +56,13 @@ body,html {
         align-items: center;
         justify-content: center;
         width: 100%;
-        min-height: 80vh;
+        min-height: 70dvh;
         height: fit-content;
-        padding: 2rem;
+        padding: 1rem;
     }
     .hero-title h1{
         font-size: 1rem;
-        color: var(--accent);
+        color: var(--grey);
     }
     
     .hero-title h2{
@@ -99,15 +103,25 @@ body,html {
         overflow: hidden;
         border-radius: 40px;
     }
+
+    iframe{
+        top: -20%;
+        height: 120%;
+    }
     
+    .cta-button{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
     .heading{
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         width: 100%;
         margin-top: 2rem;
-        margin-bottom: 1rem;
-    
+        margin-bottom: 0rem;
+        padding: 0;
     }
     
     .features{
@@ -129,10 +143,15 @@ body,html {
         padding: 0rem 0rem;
                     
     }
+
+    .features-wanna h2.heading{
+        padding: 3rem 1rem 1rem 1rem;
+        font-size: 2rem;
+    }
     
     .features-wanna h3{
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
     }
     .features-wanna p{
         font-size: 1rem;
@@ -178,7 +197,7 @@ body,html {
         border: solid 1px var(--grey);
     }
     
-    .feature{
+    .feature, .feature2{
         width: 100%;
         color: var(--black);
         background-color: var(--grey);
@@ -204,6 +223,7 @@ body,html {
         display: flex;
         width: 100%;
         gap: .5rem;
+        padding-left: 1rem;
     }			
     
     
@@ -211,6 +231,7 @@ body,html {
         width: 80%;
         font-size: 1.25rem;
         line-height: 100%;
+
     }
     
     .features-statistics{
@@ -228,17 +249,21 @@ body,html {
         width: 100%;
         height: fit-content;
         padding-bottom: 1rem;
-        border-bottom: solid 1px var(--grey);
+        border-bottom: solid 1px #9b9b9b;
         transform: translateY(70px);
         opacity: 0;
         
     }
     
+    .statistic-line{
+        padding-left: 1rem;
+    }
+
     .statistic-line.awake{
         opacity: 1;
         transform: translateY(0px);
         transition: all 600ms ease-in-out;
-        
+        padding-left: 1rem;
     }
     
     .statistic-line p{
@@ -285,5 +310,20 @@ body,html {
     p{
         line-height: 130%;
         font-size: 1rem;
+    }
+
+    .call{
+        height: 100dvh;
+    }
+    .call h2.heading{
+        width: 100%;
+    }
+    .bag1{
+        width: 170%;
+    }
+    .bag2{
+        top: 60%;
+        left: -30%;
+        width: 90%;
     }
 }

@@ -3,12 +3,13 @@
     position: fixed;
     z-index: 999;
     margin-top: .5rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 #cssmenu
 {
     width:100%;
     display:flex;
+    align-items: center ;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: var(--black);
@@ -17,7 +18,7 @@
     line-height:100%;
     -webkit-text-size-adjust:100%;
     margin:0;
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
     border-radius: 20px;
     font-size:1rem;
     --widtha:100vw;
@@ -77,15 +78,25 @@
     transition:all ease-in 50ms;
 }
 #cssmenu .cta{
-    background-color: var(--accent);
-    color: var(--black);
-    padding: .5rem;
-    border-radius: 10px;
+    background-color: var(--black);
+    color: var(--grey);
+    border: 1px solid var(--grey);
+    padding: .5em .75em;
+    border-radius: 999px;
+    
+}
+
+@keyframes cta {
+    10%{
+        background-color: var(--grey);
+    }
+    100%{
+        background-color: var(--accent);
+    }
 }
 
 #cssmenu .cta:hover{
-    background-color: var(--accent-sec);
-    color: var(--black);
+    border: 1px solid var(--accent);
 }
 /*Sub level items
 ---------------------------------------*/
@@ -246,9 +257,10 @@
         display: flex;
         gap: 1.5rem;
         flex-direction: column;
+        align-content: flex-start;
         top:-100%;
         width: 100%;
-        height: 100%;
+        height: 100dvh;
         border-radius: 0;
         padding: 2rem 1rem 4rem 1rem;
         background-color: var(--black);
@@ -273,7 +285,10 @@
 
     #cssmenu ul  {
         display: flex;
+        width: 100%;
+        align-items: flex-start;
         flex-direction: column;
+        align-content: flex-start;
         background-color:transparent;
         transition:all 400ms ease-in;
         box-sizing:border-box;
@@ -294,7 +309,7 @@
 
     #cssmenu >ul>li>span, #cssmenu >ul>li>a 
     {       
-        font-size:1.75rem;
+        font-size:2rem;
         line-height: 100%;
         letter-spacing: -1px;
         padding: 0;

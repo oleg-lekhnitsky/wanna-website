@@ -1,239 +1,267 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="./style-desktop.css" rel="stylesheet">
-		<link href="./style-mobile.css" rel="stylesheet">
-		<link href="./cssmenu/cssmenu/cssmenu.css" rel="stylesheet">		
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./style-desktop.css" rel="stylesheet" />
+    <link href="./style-mobile.css" rel="stylesheet" />
+    <link href="./cssmenu/cssmenu/cssmenu.css" rel="stylesheet" />
 
+    <title></title>
+  </head>
+  <body>
+    <style type="text/css"></style>
 
+    <div class="wrapper">
+      <div id="menuDemo">
+        <!--start CssMenu-->
+        <div class="menu-icon-wrapper">
+          <a class="header-logo" href="/">
+            <img
+              class="animated-logo"
+              src="https://static.tildacdn.com/tild3334-6431-4935-a534-346435636237/wanna_white_logo-05.svg"
+            />
+          </a>
+          <div class="menu-icon" onclick="toggleCssMenu(this)">
+            <div class="three-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div id="cssmenu">
+          <ul>
+            <li>
+              <a class="header-logo" href="/">
+                <img
+                  class="animated-logo"
+                  src="https://static.tildacdn.com/tild3334-6431-4935-a534-346435636237/wanna_white_logo-05.svg"
+                />
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li><a href="#">Use Cases</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <ul>
+            <li><a class="cta" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <script>
+          function toggleCssMenu(icon) {
+            var cssmenu = document.getElementById("cssmenu");
+            if (icon.className.indexOf("active") == -1) {
+              icon.className = "menu-icon active";
+              cssmenu.style.display = "flex";
+              setTimeout(function () {
+                cssmenu.className = "active";
+              }, 200);
+            } else {
+              icon.className = "menu-icon";
+              cssmenu.className = "";
+              setTimeout(function () {
+                cssmenu.style.display = "none";
+              }, 511);
+            }
+          }
+        </script>
+        <!--end CssMenu-->
+      </div>
 
-		<title></title>
-	</head>
-	<body>
-		<style type="text/css">
-
-		</style>
-
-
-		<div class="wrapper">
-			<div id="menuDemo">
-				<!--start CssMenu-->
-				<div class="menu-icon-wrapper">
-					<a class="header-logo" href="/">
-						<img class="animated-logo" src="https://static.tildacdn.com/tild3334-6431-4935-a534-346435636237/wanna_white_logo-05.svg">
-					</a>					
-					<div class="menu-icon" onclick="toggleCssMenu(this)">
-						<div class="three-line">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</div>
-				</div>
-				<div id="cssmenu">
-					<ul>
-						<li >
-							
-								<a class="header-logo" href="/">
-									<img class="animated-logo" src="https://static.tildacdn.com/tild3334-6431-4935-a534-346435636237/wanna_white_logo-05.svg">
-								</a>
-         
-						</li>
-					</ul>
-					<ul>
-						<li><a href="#">Footwear</a></li>
-						<li><a href="#">Watches</a></li>
-						<li><a href="#">Bags</a></li>
-						<li><a href="#">Use Cases</a></li>
-						<li><a href="#">Press</a></li>
-						<li><a href="/">CN</a></li>
-					</ul>						
-					<ul>
-						
-						<li><a class="cta" href="#">Contact</a></li>
-					</ul>						
-
-				</div>
-				<script>
-					function toggleCssMenu(icon) {
-						var cssmenu = document.getElementById('cssmenu');
-						if (icon.className.indexOf('active') == -1) {
-							icon.className = 'menu-icon active';
-							cssmenu.style.display = "flex";
-							setTimeout(function(){cssmenu.className = 'active';},200);            
-						}
-						else {
-							icon.className = 'menu-icon';
-							cssmenu.className = '';
-							setTimeout(function(){cssmenu.style.display = "none";},511); 
-						}
-					}
-				</script>
-				<!--end CssMenu-->
-				</div>			
-
-			<div class="hero-section">
-				<div class="hero-title">
-					<h1>3D Viewer for Bags</h1>
-					<h2 class="hero-heading">Wanna 3D solution provides your customers with a&nbsp;novel experience to understand the&nbsp;size and capacity of a&nbsp;bag as if they had&nbsp;it in their hands</h2>
-					<div class="hero-title-tags">
-						<p>Suitable for</p>
-						<div class="tags-wrapper">
-							<div class="tag">
-								<p>Web</p>
-							</div>
-
-						</div>
-					</div>
-					
-				</div>
-				<div class="hero-content">
-					<iframe id="bag-viewer"
-						name="wanna 3d bags" 
-						src="https://webar.wanna.fashion/3dbags/"
-						frameborder="0"
-						loading="eager" 
-						height="100%"
-						width="100%" 
-						>
-					</iframe>					
-				</div>
+      <div class="hero-section">
+        <div class="hero-title">
+          <h2 class="hero-heading">
+            The 3D Viewer for Bags offers your customers a near in-store
+            shopping experience, enabling them to understand the size and
+            capacity of&nbsp;a&nbsp;bag as if they were holding it
+            in&nbsp;their&nbsp;hands
+          </h2>
+          <div class="hero-title-tags">
+            <p>Suitable for</p>
+            <div class="tags-wrapper">
+              <div class="tag">
+                <p>iOS</p>
+              </div>
+              <div class="tag">
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+          <a class="cta-button" href="#">Contact Us</a>
+        </div>
+        <div class="hero-content">
+			<div class="iframe-descriprion">
+				Move your cursor <br> over here to try
 			</div>
+          <iframe
+            id="bag-viewer"
+            name="wanna 3d bags"
+            src="https://webar.wanna.fashion/3dbags/"
+            frameborder="0"
+            loading="eager"
+            height="100%"
+            width="100%"
+          >
+          </iframe>
+        </div>
+      </div>
 
-			<div class="heading">
-				<h2 class="heading">Value for your&nbsp;business</h2>
-			</div>
-			<div class="divider"></div>
-			<div class="features">
-				<div class="features-heading">
-					<div class="tag">
-						<h3>1</h3>
-					</div>	
-					<h3>3D Viewer for Bags increases customer confidence in purchase and allows to:</h3>
-				</div>
-				<div class="features-text">
-					<p>Zoom in and out</p>
-					<p>Explore the details from every angle</p>
-					<p>Get a better understanding of the material, texture and craftsmanship</p>
-					<p>Make informed shopping decisions</p>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="features">
-				<div class="features-heading">
-					<div class="tag">
-						<h3>2</h3>
-					</div>	
-					<h3>It reduces returns and carbon footprint:</h3>
-				</div>				
-				<div class="features-text">
-					<p>Our 3D experience tackles major industry pain point where customers return bags due to unmet size expectations</p>
-					<p>A capacity widget showing which types of objects could fit into a bag: mobile phone, glasses case, bottle 0.5L, etc.</p>
-					<p>This leads to returns decreasing and evidently contributes to sustainable development</p>
-				</div>
-			</div>
-			<div class="divider"></div>
-			<div class="features-highlight">
-				<div class="features-heading">
-					<div class="tag">
-						<h3>3</h3>
-					</div>
-					
-					<h3>Finally, it bridges the gap between products and customers and boost your business:</h3>
-				</div>				
-				<div class="features-statistics">
-					<div class="statistic-line">
-						<p>Engagement<br>increase</p>
-						<div class="statistic-number">
-							<p>&#8593;</p>
-							<p class="number number-1" data-number="32">0</p>
-							<p>%</p>
-						</div>						
-					</div>
-
-					<div class="statistic-line">
-						<p>Conversion rate<br>increase</p>
-						<div class="statistic-number">
-							<p>↑</p>
-							<p class="number number-2" data-number="4">0</p>
-							<p>%</p>
-						</div>					
-					</div>		
-
-					<div class="statistic-line">
-						<p>Returns<br>decrease</p>
-						<div class="statistic-number">
-							<p>↓</p>
-							<p class="number number-3" data-number="9">0</p>
-							<p>%</p>
-						</div>						
-					</div>
-				</div>
-				
-				
-				
-				<script src="./numbers.js"></script>
-			</div>			
-
-			<div class="heading">
-				<h2 class="heading">Why choose Wanna?</h2>
-			</div>			
-
-			<div class="features-wanna">
-				<div class="feature">
-					<h3>State-of-the-art image quality</h3>
-					<p>The high-end quality of our 3D assets creates smooth and realistic visuals.</p>
-				</div>
-				<div class="feature">
-					<h3>Easy Implementation</h3>
-					<p>We provide low code solutions that could be implemented without significant time and labor costs.</p>
-				</div>
-				<div class="feature">
-					<h3>3D content creation expert</h3>
-					<p>We provide premium-level 3D models and optimize them to be lightweight and work quickly in immersive experiences.</p>
-				</div>	
-				<div class="feature">
-					<h3>Dedicated customer service</h3>
-					<p>Our highly skilled team delves into the partner's business and tailors solutions to its needs, fulfilling requests promptly and efficiently.</p>
-				</div>												
-			</div>
+      <div class="heading">
+        <h2 class="heading">Value for your&nbsp;business</h2>
+      </div>
+      <div class="divider"></div>
+      <div class="features">
+        <div class="features-heading">
+          <div class="tag">
+            <h3>1</h3>
+          </div>
+          <h3>
+            The 3D Viewer for Bags enhances customer confidence in purchases by
+            allowing them to:
+          </h3>
+        </div>
+        <div class="features-text">
+          <p>Zoom in and out</p>
+          <p>Explore details from every angle</p>
+          <p>
+            Get a better understanding of the material, texture and
+            craftsmanship
+          </p>
+          <p>Make informed shopping decisions</p>
+        </div>
+      </div>
 
 
-													
-				
-			</div>
-
+      <div class="features-highlight">
+		
+		<div class="features-heading">
 			
-
-
-
-
-
-
-
-
-		<script type="text/javascript">
+			<div class="tag">
+			  <h3>2</h3>
+			</div>
+			<h3>It reduces returns and carbon footprint:</h3>
+		  </div>
+		  <div class="features-text">
+			<p>
+			  The 3D Viewer addresses a major industry pain point wherein
+			  customers return bags due to unmet size expectations
+			</p>
+			<p>
+			  A capacity widget shows which types of objects could fit into a bag:
+			  mobile phone, glasses case, laptop, etc
+			</p>
+			<p>
+			  This leads to a decrease in returns and therefore contributes to
+			  sustainable development
+			</p>
+		  </div>
+		  <div class="divider" style="margin: 2rem 0; "></div>
+        <div class="features-heading">
 			
+          <div class="tag">
+            <h3>3</h3>
+          </div>
 
-			var detailsElements = document.querySelectorAll('div.statistic-line');
+          <h3>
+            Finally, it bridges the gap between products and customers, boosting
+            your business:
+          </h3>
+        </div>
+        <div class="features-statistics">
+          <div class="statistic-line">
+            <p>Engagement<br />increase</p>
+            <div class="statistic-number">
+              <p>&#8593;</p>
+              <p class="number number-1" data-number="32">0</p>
+              <p>%</p>
+            </div>
+          </div>
 
-			let awaker = function() {
-			  for (let i = 0; i < detailsElements.length; i++) {
-			    let detailsElement = detailsElements[i];
-			    let rect = detailsElement.getBoundingClientRect();
-			    if (rect.top < window.innerHeight && rect.bottom > 0) {
-			      detailsElement.classList.add('awake');
-			    } else {
-			      detailsElement.classList.remove('awake');
-			    }
-			  }
-			};
+          <div class="statistic-line">
+            <p>Conversion rate<br />increase</p>
+            <div class="statistic-number">
+              <p>↑</p>
+              <p class="number number-2" data-number="4">0</p>
+              <p>%</p>
+            </div>
+          </div>
 
-			document.addEventListener('scroll', awaker);
-		</script>
+          <div class="statistic-line">
+            <p>Returns<br />decrease</p>
+            <div class="statistic-number">
+              <p>↓</p>
+              <p class="number number-3" data-number="9">0</p>
+              <p>%</p>
+            </div>
+          </div>
+        </div>
 
+        <script src="./numbers.js"></script>
+      </div>
 
-	</body>
-	</html>
+      <div class="heading"></div>
+
+      <div class="features-wanna">
+        <h2 class="heading">Why choose Wanna?</h2>
+        <div class="feature">
+          <h3>Exceptional customer service</h3>
+          <p>
+            Our highly skilled team, well-versed in luxury brands' needs, delves
+            into the partner's business, tailors solutions to their requests,
+            and fulfills them promptly and efficiently.
+          </p>
+        </div>
+        <div class="feature2">
+          <h3>Quality meets efficiency</h3>
+          <p>
+            We are the 3D fashion expert, providing premium quality 3D models
+            that create smooth and realistic visuals, and optimizing them to be
+            lightweight and perform fast in immersive experiences.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Full-service provider</h3>
+          <p>
+            We help enrich a brand's digital strategy by providing 3D and AR
+            experiences that are game-changers at every stage of the customer
+            journey, including awareness, consideration, purchase, and loyalty.
+          </p>
+        </div>
+        <div class="feature2">
+          <h3>Easy Implementation</h3>
+          <p>
+            We offer low-code solutions that can be implemented without
+            significant time and labor costs, including a ready-made solution
+            for Virtual Try-On that can be integrated into a website with just a
+            few lines of code.
+          </p>
+        </div>
+      </div>
+	  <div class="call">
+		<img class="bag1" src="https://static.tildacdn.com/tild3539-3231-4534-a162-353732643539/bag1.png" alt="bag">
+		<img class="bag2" src="https://static.tildacdn.com/tild6135-6262-4332-b437-613065633231/bag2.png" alt="bag">
+		<h2 class="heading">Let's talk about enriching your digital strategy with 3D and AR experiences!</h2>
+	  </div>
+    </div>
+
+    <script type="text/javascript">
+      var detailsElements = document.querySelectorAll("div.statistic-line");
+
+      let awaker = function () {
+        for (let i = 0; i < detailsElements.length; i++) {
+          let detailsElement = detailsElements[i];
+          let rect = detailsElement.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            detailsElement.classList.add("awake");
+          } else {
+            detailsElement.classList.remove("awake");
+          }
+        }
+      };
+
+      document.addEventListener("scroll", awaker);
+    </script>
+  </body>
+</html>
